@@ -1,0 +1,19 @@
+What is static route ?
+
+- Connecting local network to destination network manually.
+- Basically declare the network address of the destination you want send the packet.
+- It is not like dynamic routing that automatically detect the best route (neighbour) to communicate
+
+
+
+How to configure ?
+
+Next Hop technique:
+- ip route <destination network> <netmask> <next hop>  //next hop is the ip address of the incoming interface of the previous router before the destination router
+
+Exit interface technique:
+- ip route <destination network> <netmask> <exit interface>  //the outbound interface of the router before your destination 
+
+Default route:
+- ip route 0.0.0.0 0.0.0.0 <next hop>  //0.0.0.0 means all destination address which covers ip address from 0.0.0.0 - 255.255.255.255 . 
+
