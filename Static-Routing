@@ -17,3 +17,14 @@ Exit interface technique:
 Default route:
 - ip route 0.0.0.0 0.0.0.0 <next hop>  //0.0.0.0 means all destination address which covers ip address from 0.0.0.0 - 255.255.255.255 . 
 
+
+How to see the routing table ?
+
+router(config): do show ip route
+
+S -  <your destination address> connected via <next hop address>
+C - <connected network> via interface
+L - <ip address of your router> via interface
+
+S is static routing , C is connected , L is local
+
