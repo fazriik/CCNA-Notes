@@ -1,1 +1,17 @@
+What is LAN ?
+-LAN is a group of a devices in a single network like pc,laptop and printer.
 
+What is Broadcast Domain ?
+- a group of devices that will receive a broadcast frame (MAC address destination) by another members of the group , it's like bulk sending.
+
+What is VLAN ?
+- it is a way to split a broadcast domain to a separate broadcast domain. which is make another group/LAN virtually via switch interfaces.
+- let say a company have 3 departments, you dont need to buy 3 network switches. just split 3 virtual LAN within 3 departments.
+
+Configuration
+# vlan <number>          //creating the vlan(using number)
+# name <credential>      //label the vlan name
+
+#interface range <int-int>            //you enter the switch interface config mode
+#switchport mode access               //it is a switchport that carry a single vlan while switchport trunk carry multiple vlan's
+#switchport access vlan <number>      //assign the port under the vlan you want
